@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <!-- <form action="{% url 'test_submit' %}" method="POST">
+        {% csrf_token %}
+             {{ form }}
+        <button type="submit">DO IT</button>
+    </form> -->
+    <!--- Форма со свойствами text, integer, email. Нужно реализовать Ajax-om отправку и обработку данных
+    на endpoint 'test_submit' на который отправляется и сейчас. Ответ приходит в виде JSON обьекта {"status": "success"/"error",
+    "data": data} где data это текстовое значение(text прописанный integer раз), или словарь ошибок (ошибка воспроизводится если ввести
+    латинский символ "а" в поле text). Реализовать с помощью всплывающего по середине черного окна с округленными углами
+     с прозрачностью 50% которое закрывается нажатием мыши вне окна -->
+{% endblock %}

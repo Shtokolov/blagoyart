@@ -1,0 +1,102 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static '/main.css' %}">
+</head>
+<body>
+<header class="header">
+  <div>
+    <a class="header__logo" href="#"></a>
+    <div class="header__logo-text">
+      Интернет-магазин «Благой арт»
+    </div>
+  </div>
+
+  <div class="header__search">
+  <input placeholder="Введите назавние или артукул" type="search">
+  <button class="fa fa-search"></button>
+  </div>
+  <div class="header__info">
+    <a class="header__contact" href="tel:+78007078139">+7 (800) 707-81-39</a>
+    <div class="header__info-text">
+      <p>ПН-ПТ с 9:00 до 18:00</p>
+      <p>Доставка по РФ и СНГ</p>
+    </div>
+  <div/>
+    <!-- <ul>
+        <a href="{% url "main" %}">
+            <li>MAIN</li>
+        </a>
+        <a href="{% url "page" %}">
+            <li>PAGE</li>
+        </a>
+    </ul> -->
+    <!-- Реализовать кнопки MAIN,PAGE в хедере помимо существующих в макете.-->
+
+</header>
+<nav class="menu">
+  <ul class="menu__links">
+    <li>
+      <a class="submenu-title"href="#">Каталог товаров</a>
+      <ul class="menu__submenu">
+        <li><a href="#" class="submenu-title--sub">Свадебная бижутерия <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+          <ul class="menu__submenu--sub">
+              <a class="menu__submenu--sub-label" href="#">Свадебная бижутерия</a>
+              <li><a href="#">Аксессуары для волос </a></li>
+              <li><a href="#">Броши</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Аксессуары для волос </a></li>
+        <li><a href="#">Броши</a></li>
+        <li><a href="#">Мужские аксессуары</a></li>
+        <li><a href="#">Клатчи</a></li>
+        <li><a href="#">Детская бижутерия</a></li>
+        <li><a href="#">Демонстрационное<br><span>оборудование</span></a></li>
+      </ul>
+    </li>
+    <li><a href="{% url "main" %}">MAIN</a></li>
+    <li><a href="{% url "page" %}">PAGE</a></li>
+    <li><a href="#">Оплата и доставка</a></li>
+    <li><a href="#">Документы</a></li>
+    <li><a href="#">Контакты</a></li>
+  </ul>
+  <ul class="menu__accaunt">
+    <li class="menu__accaunt-cart">
+      <span class="menu__accaunt-cart__icon fa fa-shopping-cart"></span>
+      <span class="cart-list__counter">10</span>
+      <a class="cart-list"href="#">Товаров / 56 789 P</a></li>
+    <li class="menu__accaunt-login"><a href="#">Войти</a></li>
+  </ul>
+</nav>
+
+<div class="jcarousel">
+  <ul>
+    <li><img src="{% static 'images/slider_img.png' %}" alt="Новая коллекция SWAROVSKI уже здесь!"></li>
+    <li><img src="{% static 'images/slider_img.png' %}" alt="Новая коллекция BRIONI уже здесь!"></li>
+    <li><img src="{% static 'images/slider_img.png' %}" alt="Новая коллекция PANDORA уже здесь!"></li>
+  </ul>
+
+  <div class="controls">
+
+    <a class="jcarousel-prev" href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+    <span class="jcarousel-caption"></span>
+    <a class="jcarousel-next" href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+  </div>
+  <div class="jcarousel-pagination">
+        <!-- Pagination items will be generated in here -->
+    </div>
+
+</div>
+
+{% block content %}{% endblock %}
+  <script src="https://use.fontawesome.com/4a7e79f09e.js"></script>
+  <script src="{% static '/jquery-3.2.1.min.js' %}"></script>
+  <script src="{% static '/jqCarousel.js' %}"></script>
+  <script src="{% static '/main.js' %}"></script>
+
+</body>
+</html>
