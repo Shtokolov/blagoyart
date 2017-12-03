@@ -4,8 +4,34 @@
 {% block content %}
 
 
+
+ <article class="clock">
+   <div class="hours-container">
+     <div class="hours hand"></div>
+   </div>
+   <div class="minutes-container">
+     <div class="minutes hand"></div>
+   </div>
+   <div class="seconds-container">
+     <div class="seconds hand"></div>
+   </div>
+ </article>
+
+
+
+
+ <script>
+
+  window.onload = function() {
+    initLocalClocks({{ time }});
+    moveSecondHands();
+    setUpMinuteHands();
+  };
+
+</script>
+
     <!--- SLIDER с макета --!>
-    {{ time }}
+
     <!--- На JS реализовать таймер который будет отображать текущее время с помощью приходящих в контекст данных.
     Данные приходят в виде timestamp. Визуализация таймера любая --!>
     <!--- Таймер и слайдер должны быть блоками на всю ширину страницы, независимыми как друг от друга, так и от хедера. --!>

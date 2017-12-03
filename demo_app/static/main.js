@@ -54,4 +54,17 @@ $('.jcarousel-pagination')
     $('.jcarousel').on('jcarousel:visiblein', 'li', function(event, carousel) {
       var caption = $(this).find("img").prop("alt");
       $('.jcarousel-caption').text(caption);
-  });
+    });
+
+// $.ajax({
+//     url: '{% url 'test_submit' %}',
+//     data: {
+//       'username': username
+//     },
+//     dataType: 'json',
+//     success: function (data) {
+//       if (data.is_taken) {
+//         alert("A user with this username already exists.");
+//       }
+//     }
+//   });
