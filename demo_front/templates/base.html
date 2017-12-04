@@ -73,7 +73,7 @@
   </ul>
 </nav>
 
-<div class="jcarousel">
+<div class="jcarousel hidden">
   <ul>
     <li><img src="{% static 'images/slider_img.png' %}" alt="Новая коллекция SWAROVSKI уже здесь!"></li>
     <li><img src="{% static 'images/slider_img.png' %}" alt="Новая коллекция BRIONI уже здесь!"></li>
@@ -95,11 +95,8 @@
 {% block content %}{% endblock %}
   <script src="https://use.fontawesome.com/4a7e79f09e.js"></script>
   <script src="{% static '/jquery-3.2.1.min.js' %}"></script>
-  <script src="{% static '/jqCarousel.js' %}"></script>
-  <script src="{% static '/main.js' %}"></script>
-  <script src="{% static '/page.js' %}"></script>
-  <script src="{% static '/js.cookie.js' %}"></script>
-  <script src="{% static '/form.js' %}"></script>
+  <script src="{% static '/bundle.js' %}"></script>
+
 
 </body>
 </html>

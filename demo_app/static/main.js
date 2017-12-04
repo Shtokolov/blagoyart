@@ -56,15 +56,11 @@ $('.jcarousel-pagination')
       $('.jcarousel-caption').text(caption);
     });
 
-// $.ajax({
-//     url: '{% url 'test_submit' %}',
-//     data: {
-//       'username': username
-//     },
-//     dataType: 'json',
-//     success: function (data) {
-//       if (data.is_taken) {
-//         alert("A user with this username already exists.");
-//       }
-//     }
-//   });
+    $(document).ready(function () {
+        $('.jcarousel').fadeIn(600).removeClass('hidden');
+        $('#post-form').addClass('visible');
+    });
+
+    $('.menu ul li').hover(function() {
+    	$(this).children('ul').stop(true, false, true).fadeToggle(600);
+    });
