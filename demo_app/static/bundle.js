@@ -1658,6 +1658,7 @@ $('.jcarousel-pagination')
 
     $(document).ready(function () {
         $('.jcarousel').fadeIn(600).removeClass('hidden');
+        $('.clock').fadeIn(600).removeClass('hidden');
         $('#post-form').addClass('visible');
     });
 
