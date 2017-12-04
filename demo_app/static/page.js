@@ -1,4 +1,12 @@
- 
+$(function() {
+  if ($( ".clock" ).length > 0) {
+    var time = $( ".clock" ).data( "time" );
+    initLocalClocks(time);
+    moveSecondHands();
+    setUpMinuteHands();
+  }
+});
+
 
  function initLocalClocks(timestamp) {
 

@@ -5,7 +5,7 @@
 
 
 
- <article class="clock">
+ <article class="clock" data-time="{{ time }}">
    <div class="hours-container">
      <div class="hours hand"></div>
    </div>
@@ -20,15 +20,6 @@
 
 
 
- <script>
-
-  window.onload = function() {
-    initLocalClocks({{ time }});
-    moveSecondHands();
-    setUpMinuteHands();
-  };
-
-</script>
 
     <!--- SLIDER с макета --!>
 
