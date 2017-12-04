@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import './jqCarousel.js';
 import './main.js';
 import './page.js';
